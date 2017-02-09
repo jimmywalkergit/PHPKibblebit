@@ -35,9 +35,13 @@
  }elseif($username == "Off"){
      echo "This is your pet.... Why would you do this to me? :(";
      
+ } elseif($username == "test1"){
+     $mytest = shell_exec('ls -lart');
+     echo $mytest;
  }elseif ($username != "") {
  echo  $username . ", hello my friend, I'm a fellow server. Here's your data!: ...jk ";
  }
+
  
  
  else {
