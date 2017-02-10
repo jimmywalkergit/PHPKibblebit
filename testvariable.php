@@ -33,12 +33,22 @@
  if($myvar1  != ""){
      echo $myvar1;
 }
-elseif($myvar2 != ""){
-    echo $myvar2;
+else{
+    
+        if($myvar2 != ""){
+            echo $myvar2;
+        }
+        else {
+            echo "Myvar2 Empty";
+        }
+    
 }
- else {
- echo "Myvar1 or Myvar2 Empty";
- }
+
+
+
+ 
+ 
+ 
 }
 ?>
 

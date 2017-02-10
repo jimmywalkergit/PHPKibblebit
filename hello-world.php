@@ -27,7 +27,7 @@
  if (isset($postdata)) {
  $request = json_decode($postdata);
  $username = $request->username;
- $myvar = $request->myvar; 
+
  
  
  if($username == "On"){
@@ -41,7 +41,7 @@
      echo $mytest;
  }elseif ($username != "") {
  echo  $username . ", hello my friend, I'm a fellow server. Here's your data!: ...jk ";
- echo $myvar;
+
  }
 
  
