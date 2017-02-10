@@ -31,12 +31,11 @@
  
  
  if($myvar1  != ""){
-     echo $myvar1;
+     echo strtoupper($myvar1);
 }
 else{
-    
         if($myvar2 != ""){
-            echo $myvar2;
+            echo strtoupper($myvar2);
         }
         else {
             echo "Myvar2 Empty";
