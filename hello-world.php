@@ -27,7 +27,7 @@
  if (isset($postdata)) {
  $request = json_decode($postdata);
  $username = $request->username;
- $myvar = $request->myvar; 
+
  
  
  if($username == "On"){
@@ -37,11 +37,11 @@
      echo "This is your pet.... Why would you do this to me? :(";
      
  } elseif($username == "test1"){
-     $mytest = shell_exec('ls -lart');
+     $mytest = shell_exec('ls -l');
      echo $mytest;
  }elseif ($username != "") {
  echo  $username . ", hello my friend, I'm a fellow server. Here's your data!: ...jk ";
- echo $myvar;
+
  }
 
  
