@@ -38,7 +38,7 @@ else{
             echo strtoupper($myvar2);
         }
         else {
-            echo "Myvar2 Empty";
+            echo "Myvar Empty";
         }
     
 }
