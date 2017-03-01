@@ -26,21 +26,21 @@
     $postdata = file_get_contents("php://input");
  if (isset($postdata)) {
  $request = json_decode($postdata);
- $username = $request->username;
+ $mydata = $request->mydata;
 
  
  
- if($username == "On"){
+ if($mydata == "On"){
      echo "I'm your pet, thanks again for feeding me :)";
      
- }elseif($username == "Off"){
+ }elseif($mydata == "Off"){
      echo "This is your pet.... Why would you do this to me? :(";
      
- } elseif($username == "test1"){
-     $mytest = shell_exec('ls -l');
+ } elseif($mydata == "test1"){
+     $mytest = shell_exec('python testpython.py');
      echo $mytest;
- }elseif ($username != "") {
- echo  $username . ", hello my friend, I'm a fellow server. Here's your data!: ...jk ";
+ }elseif ($mydata != "") {
+ echo  $mydata . ", hello my friend, I'm a fellow server. Here's your data!: ...jk ";
 
  }
 
