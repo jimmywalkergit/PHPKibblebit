@@ -13,22 +13,35 @@ if ($conn->connect_error) {
 
 $feedtime = date("D M d, Y G:i");
 
-$sql = "SELECT * FROM `Feedings` WHERE 1";
-//$sql2 = "INSERT INTO `Feeds`(`KibblebitID`, `Date`, `Notes`) VALUES ('12345'," .$feedtime . ",'fed')";
+$sql = "SELECT * FROM `Feeds` WHERE 1";
+//echo "heres the feedtime" . $feedtime . "and some more";
+$sql2 = "INSERT INTO `Feeds`(`KibblebitID`, `Date`, `Notes`) VALUES (12345, 'hi','fed sql')";
 
-//$insert = $conn->query($sql2);
+$insert = $conn->query($sql2);
 $result = $conn->query($sql);
+
+
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "FeedID: " . $row["FeedID"]. " - KibblebitID: " . $row["KibblebitID"]. " " . $row["Time"]. "<br>";
+        echo "FeedID: " . $row["FeedID"]. " - KibblebitID: " . $row["KibblebitID"]. " " . $row["Date"]. "<br>";
 
     }
 } else {
     echo "0 results";
 }
 $conn->close();
+
+
+
+
+
+
+
+
+
+
 
 //escapeshellcmd
 //$command = ('/var/www/html/testpython.py');
