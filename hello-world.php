@@ -36,7 +36,7 @@
      
      $mytime = date("D M d, Y G:i");
      echo "I'm your pet, thanks again for feeding me :) Right now it is: ".$mytime;
-     //include 'mysqlexec.php';
+     include 'mysqlexec.php';
      
  }elseif($mydata == "Off"){
      echo "This is your pet.... Why would you do this to me? :(";
