@@ -16,6 +16,7 @@ $feedtime = date("D M d, Y G:i");
 $sql = "SELECT * FROM `Feeds` WHERE 1";
 //echo "heres the feedtime" . $feedtime . "and some more";
 $sql2 = "INSERT INTO `Feeds`(`KibblebitID`, `Date`, `Notes`) VALUES (12345, 'hi','fed sql')";
+echo "Adding Feed Time to Database!";
 
 $insert = $conn->query($sql2);
 $result = $conn->query($sql);
@@ -31,6 +32,8 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
+
+echo " \n \n Added Feed Time to Database!";
 $conn->close();
 
 
